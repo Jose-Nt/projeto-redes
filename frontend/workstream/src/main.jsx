@@ -2,8 +2,8 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './styles/index.css'
-import LoginAndRegister from './pages/LoginAndRegister.jsx'
 import App from './App.jsx'
+import Login from './pages/Login.jsx';
 
 const router = createBrowserRouter([
   //Rotas possiveis na aplicação
@@ -11,11 +11,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
   },
-  
   {
-    path:"/enter",
-    element: <LoginAndRegister/>
-  },
+    path:"/login",
+    element: <Login/>
+  }
 ])
 
 //Renderiza as rotas da aplicação

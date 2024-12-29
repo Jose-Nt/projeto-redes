@@ -7,7 +7,7 @@
 }
 
 body,
-input {
+.LoginInput {
   font-family: "Poppins", sans-serif;
 }
 
@@ -39,7 +39,7 @@ input {
   z-index: 5;
 }
 
-form {
+.loginForm {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +51,7 @@ form {
   grid-row: 1 / 2;
 }
 
-form.sign-up-form {
+.loginForm.sign-up-form {
   opacity: 0;
   z-index: 1;
 }
@@ -73,10 +73,9 @@ form.sign-in-form {
   margin: 10px 0;
   height: 55px;
   border-radius: 55px;
-  display: grid;
-  grid-template-columns: 15% 85%;
+  display: flex; 
+  align-items: center; 
   padding: 0 0.4rem;
-  position: relative;
 }
 
 .input-field i {
@@ -87,7 +86,7 @@ form.sign-in-form {
   font-size: 1.1rem;
 }
 
-.input-field input {
+.input-field .LoginInput {
   background: none;
   outline: none;
   border: none;
@@ -97,9 +96,10 @@ form.sign-in-form {
   color: #333;
 }
 
-.input-field input::placeholder {
+.input-field .LoginInput::placeholder {
   color: #aaa;
   font-weight: 500;
+  text-align: center;
 }
 
 .social-text {
@@ -242,12 +242,12 @@ form.sign-in-form {
   left: 25%;
 }
 
-.container.sign-up-mode form.sign-up-form {
+.container.sign-up-mode .loginForm.sign-up-form {
   opacity: 1;
   z-index: 2;
 }
 
-.container.sign-up-mode form.sign-in-form {
+.container.sign-up-mode .loginForm.sign-in-form {
   opacity: 0;
   z-index: 1;
 }
