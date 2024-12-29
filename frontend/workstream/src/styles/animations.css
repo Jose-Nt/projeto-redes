@@ -1,0 +1,21 @@
+/* Animação para mover os formulários para fora da tela */
+.translate-x-full {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Animação para trazer os formulários de volta para a tela */
+.-translate-x-full {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Se você deseja mover o painel para a direita ou esquerda */
+.move-right {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.panel-animation {
+    transition: transform 0.3s ease-in-out;
+}
