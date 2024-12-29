@@ -2,7 +2,7 @@ import { useState } from "react";
 import LoginForm from "../components/LoginForm";
 import RegisterForm from "../components/RegisterForm";
 import Panel from "../components/Panel";
-import '../styles/animations.css'; // Certifique-se de que o arquivo CSS está correto
+import '../styles/animations.css'; 
 
 function LoginAndRegister() {
     const [isSignUp, SetisSignUp] = useState(false); 
