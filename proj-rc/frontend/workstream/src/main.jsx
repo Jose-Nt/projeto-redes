@@ -8,7 +8,7 @@ const router = createBrowserRouter([
   //Rotas possiveis na aplicação
   {
     path: "/login",
-    element: <Login />,
+    element: <Login />
   },
 ]);
 
