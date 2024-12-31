@@ -1,6 +1,6 @@
 function Input(props){
     return (
-        <input className="w-[100%] h-[50px]
+        <input className="w-[90%] h-[50px]
         bg-gray-100
         text-center font-medium
         placeholder-gray-400 placeholder:text-lg 
@@ -10,6 +10,7 @@ function Input(props){
         placeholder={props.placeholder}
         value={props.value}
         onChange={props.onChange}
+        onKeyDown={props.onKeyDown}
         />
     )
 }
