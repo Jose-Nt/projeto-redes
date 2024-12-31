@@ -5,11 +5,11 @@ import {CalendarCheck} from 'lucide-react'
 function Header(props){
     return (
     <div className="
-    w-[100%] h-[10%] bg-emerald-500
+    w-[100%] h-[8%] bg-emerald-500
     flex flex-row justify-center items-center gap-10">
         
         <div
-        onClick={props.switchChatMode} 
+        onClick={props.switchToChatMode} 
         className='flex flex-col items-center 
         text-white font-medium cursor-pointer
         transition hover:scale-110'>
@@ -29,7 +29,7 @@ function Header(props){
             <h1>Participantes</h1>
         </div>
         <div 
-        onClick={props.switchChatMode}
+        onClick={props.switchToTaskMode}
         className='flex flex-col items-center 
         text-white font-medium cursor-pointer
         transition hover:scale-110'>

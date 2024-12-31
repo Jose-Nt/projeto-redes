@@ -6,9 +6,18 @@ import Task from "../components/Task";
 import "../styles/TasksAnimation.css";
 
 function Home() {
-  const [chatMode, setChatMode] = useState(false);
-  const switchChatMode = () => {
-    setChatMode(!chatMode);
+  const [username] = useState("USER"); 
+  const [groups] = useState(["Grupo1", "Batatas", "Grupo Legal", "HAHA", "Grupo2", "Cenouras", "Grupo Chato >:(", "anao", "Grupo3", "Alface", "Grupo Mais ou Menos", "RAAAAA" ]);
+  const [level] = useState(0); 
+  const [progress] = useState(50); 
+
+
+  const [chatMode, setChatMode] = useState(true);
+  const switchToChatMode = () => {
+    setChatMode(true);
+  };
+  const switchToTaskMode = () => {
+    setChatMode(false);
   };
 
   const [taskList, setTaskList] = useState([
@@ -28,16 +37,15 @@ function Home() {
         w-[100%] h-[100vh]
         flex flex-col"
     >
-      <Header switchChatMode={switchChatMode} />
-
-      <div className="flex flex-row h-[100%]">
-        <MenuBar />
+      <Header switchToChatMode={switchToChatMode} switchToTaskMode={switchToTaskMode} />
+      <MenuBar username={username} groups={groups} progress={progress} level={level}/>
+      <div className="flex flex-1 flex-row overflow-hidden">
         {chatMode ? (
           <Chat />
         ) : (
           <div
             className="flex flex-col  items-center 
-                    w-[80%] h-[100%] overflow-y-auto"
+                    w-[100%] h-[100%] overflow-y-auto"
           >
             {taskList.map((task) => (
               <div

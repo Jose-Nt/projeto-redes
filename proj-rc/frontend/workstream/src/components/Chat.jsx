@@ -1,5 +1,5 @@
 import Message from './Message';
-import anonimoImagem from "../img/anonimo.png"
+import anonimoImagem from "../img/default_user.svg"
 import Input from '../components/Input'
 import { useState } from 'react';
 import {CirclePlus } from 'lucide-react';
