@@ -1,0 +1,24 @@
+Na pasta raiz:
+- npm init -y
+- npm install mysql2 express body-parser express-session cors cookie-parser
+
+docker build -t node-image .
+docker build -t mysql-image ./src/db
+docker network create app-projetoredes
+docker run -d -p 3306:3306 --network app-projetoredes --name mysql-container mysql-image
+docker run -d -p 80:80 --network app-projetoredes --name node-container node-image
+
+##
+ACESSO DB
+- docker exec -it mysql-container mysql -u admin -p
+- USE projetoredes
+- EXECUTAR CONSULTAS SQL (Não esquecer ";" no final de cada linha)
+
+##
+REMOVER DOCKERS
+docker stop node-container
+docker remove node-container
+docker stop mysql-container
+docker remove mysql-container
+docker image remove node-image
+docker image remove mysql-image
