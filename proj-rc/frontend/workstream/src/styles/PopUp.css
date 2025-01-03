@@ -1,0 +1,16 @@
+.fixed-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;                     /* Para garantir que fique acima de outros elementos */
+    background-color: white;        
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    max-height: 50%; /* Limita a altura máxima do pop-up */
+    overflow-y: auto; /* Impede o crescimento do pop-up */
+}
+
+  
